@@ -1,0 +1,21 @@
+---
+layout: layout.njk
+title: Mio's Portfolio
+---
+<head>
+  <meta name="UTF-8" >
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <section class="hero">
+    <h1>👋 Hello I am Mio</h1>
+    <h2>An aprentice as a Software developer</h2>
+  </section>
+ <div class="content-box">
+ <h2>What i like</h2>
+  {% for hobbie in hobbies %}
+    <p>{{hobbie}}</p>
+  {% endfor %}
+</div>
+</body>
