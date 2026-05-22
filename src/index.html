@@ -12,28 +12,33 @@ extraCss:
   <div class="content-box">
     <h2>What i like</h2>
     {% for hobbie in hobbies %}
-    <p>{{hobbie}}</p>
+    <li>{{hobbie}}</li>
     {% endfor %}
   </div>
 
   <div class="content-box">
     <h2>My skills</h2>
     {% for skill in skills %}
-    <p>{{skill}}</p>
+    <li>{{skill}}</li>
     {% endfor %}
   </div>
 
   <div class="content-box">
     <h2>What i am learning</h2>
     {% for learning in learnings %}
-    <p>{{learning}}</p>
+    <li>{{learning}}</li>
     {% endfor %}
   </div>
 </section>
 <section>
   <div class="content-box">
     <h2> My Links</h2>
-    <a href="https://github.com/Nuntilus">My github</a>
+    <li>
+      <a href="https://github.com/Nuntilus">My github</a>
+    </li>
+    <li>
+      <a href="https://mio-galli.netlify.app">My old Portfolio</a>
+    </li>
   </div> 
   <div class="content-box">
     <h2>Contact me</h2>

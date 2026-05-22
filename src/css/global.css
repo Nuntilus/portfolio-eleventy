@@ -1,4 +1,3 @@
-/* Base element styles */
 body {
   font-family: system-ui, sans-serif;
   background-color: #1F1721;
@@ -21,7 +20,7 @@ h2{
   margin: 0.5rem;
 }
 
-p{
+p, li{
   font-size: 1.2rem;
   margin: 0.5rem;
 }
