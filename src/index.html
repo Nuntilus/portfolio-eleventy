@@ -1,21 +1,42 @@
 ---
 layout: layout.njk
 title: Mio's Portfolio
+extraCss:
+  - /css/index.css
 ---
-<head>
-  <meta name="UTF-8" >
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/css/index.css">
-</head>
-<body>
-  <section class="hero">
-    <h1>👋 Hello I am Mio</h1>
-    <h2>An aprentice as a Software developer</h2>
-  </section>
- <div class="content-box">
- <h2>What i like</h2>
-  {% for hobbie in hobbies %}
+<section class="hero">
+  <h1>👋 Hello I am Nuntilus</h1>
+  <h2>An aprentice as a Software developer</h2>
+</section>
+<section>
+  <div class="content-box">
+    <h2>What i like</h2>
+    {% for hobbie in hobbies %}
     <p>{{hobbie}}</p>
-  {% endfor %}
-</div>
-</body>
+    {% endfor %}
+  </div>
+
+  <div class="content-box">
+    <h2>My skills</h2>
+    {% for skill in skills %}
+    <p>{{skill}}</p>
+    {% endfor %}
+  </div>
+
+  <div class="content-box">
+    <h2>What i am learning</h2>
+    {% for learning in learnings %}
+    <p>{{learning}}</p>
+    {% endfor %}
+  </div>
+</section>
+<section>
+  <div class="content-box">
+    <h2> My Links</h2>
+    <a href="https://github.com/Nuntilus">My github</a>
+  </div> 
+  <div class="content-box">
+    <h2>Contact me</h2>
+    <p>Email: nuntilus@clavitus.ch</p>
+  </div>
+</section>

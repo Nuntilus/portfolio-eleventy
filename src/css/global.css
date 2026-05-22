@@ -8,6 +8,8 @@ body {
   padding: 2rem;
 }
 section{
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -22,4 +24,12 @@ h2{
 p{
   font-size: 1.2rem;
   margin: 0.5rem;
+}
+
+a{
+  color: white;
+}
+
+h1, h2, h2, p, a{
+  margin-left: 0 ;
 }
