@@ -17,13 +17,24 @@
   flex-direction: column;
   justify-content: center;
 }
-.hero h1{
+.hero h1 h2{
   margin: 0;
+  font-family: 'VT323', static;
 }
-.hero h2{
-  padding-left: 6rem;
+.hero  {
+  margin: 0;
+  font-family: 'VT323', static;
 }
-
 section{
   flex-direction: row;
+}
+
+.hero-container{
+  display: flex;
+}
+.hero-text-container{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
