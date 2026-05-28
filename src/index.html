@@ -3,10 +3,19 @@ layout: layout.njk
 title: Mio's Portfolio
 extraCss:
   - /css/index.css
+  - /css/animations.css
+
 ---
 <section class="hero">
-  <h1>👋 Hello I am Nuntilus</h1>
-  <h2>An aprentice as a Software developer</h2>
+  <div class="hero-container">
+    <div class="hero-emoji-container">
+      <h1>👋</h1> 
+    </div>
+    <div class="hero-text-container">
+      <h1 class = "type-writer stop-cursor"> Hello I am Nuntilus</h1> 
+      <h2 class = "type-writer offset">An aprentice as a Software developer</h2> 
+    </div>
+  </div>
 </section>
 <section>
   <div class="content-box">
@@ -26,7 +35,7 @@ extraCss:
   <div class="content-box">
     <h2>What i am learning</h2>
     {% for learning in learnings %}
-    <li>{{learning}}</li>
+      <li>{{learning}}</li>
     {% endfor %}
   </div>
 </section>

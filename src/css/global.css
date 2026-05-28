@@ -1,5 +1,5 @@
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'Ananymous Pro', monospace;
   background-color: #1F1721;
   color: pink;
   line-height: 1.6;
@@ -23,6 +23,10 @@ h2{
 p, li{
   font-size: 1.2rem;
   margin: 0.5rem;
+}
+
+li{
+  margin-left: 1rem;
 }
 
 a{
