@@ -1,5 +1,6 @@
+/* Typewriter effect with blinking caret */
 :root {
-  --typewriter-duration: 2s;
+  --typewriter-duration: 1s;
   --caret-blinking-duration: 0.7s;
   --caret-color: pink;
 }
@@ -17,23 +18,24 @@
   animation:
     typing var(--typewriter-duration) steps(40, end) forwards,
     blink-caret var(--caret-blinking-duration) step-end infinite;
-  animation-delay: 0s, var(--typewriter-duration); /* blink waits for typing to end */
+  animation-delay: 0s, var(--typewriter-duration);
+  /* blink waits for typing to end */
 }
 
 /* Delayed versions */
 .type-writer.offset {
-  animation-delay: var(--typewriter-duration),
-                   calc(var(--typewriter-duration) * 2);
+  animation-delay:
+    var(--typewriter-duration), calc(var(--typewriter-duration) * 2);
 }
 
 .type-writer.offset2 {
-  animation-delay: calc(var(--typewriter-duration) * 2),
-                   calc(var(--typewriter-duration) * 3);
+  animation-delay:
+    calc(var(--typewriter-duration) * 2), calc(var(--typewriter-duration) * 3);
 }
 
 .type-writer.offset3 {
-  animation-delay: calc(var(--typewriter-duration) * 3),
-                   calc(var(--typewriter-duration) * 4);
+  animation-delay:
+    calc(var(--typewriter-duration) * 3), calc(var(--typewriter-duration) * 4);
 }
 
 /* Optional modifier: stop cursor blink after typing finishes */
@@ -42,7 +44,8 @@
     typing var(--typewriter-duration) steps(40, end) forwards,
     blink-caret var(--caret-blinking-duration) step-end infinite;
   animation-delay: 0s, var(--typewriter-duration);
-  animation-iteration-count: 1, 0; /* Blink a few times after finish */
+  animation-iteration-count: 1, 0;
+  /* Blink a few times after finish */
   animation-fill-mode: forwards, forwards;
 }
 
@@ -52,6 +55,7 @@
     width: 0;
     visibility: visible;
   }
+
   100% {
     width: 100%;
     visibility: visible;
@@ -60,7 +64,39 @@
 
 /* Blinking caret */
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: var(--caret-color); }
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--caret-color);
+  }
 }
 
+
+.scroller-inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80% ,transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80% ,transparent);
+}
+
+.scroller[data-animated="true"] .scroller-inner {
+  width: fit-content;
+  flex-wrap: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll{
+  to{
+    transform: translate(calc(-50% + 0.75rem));
+  }
+}
