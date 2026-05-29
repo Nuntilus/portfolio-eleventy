@@ -1,5 +1,4 @@
-
-.content-box{
+.content-box {
   background-color: #525174;
   padding-left: 20px;
   min-width: 20vw;
@@ -12,29 +11,48 @@
   border-radius: 10px;
 }
 
-.hero{
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.hero h1 h2{
+
+.hero h1,
+.hero h2 {
   margin: 0;
-  font-family: 'VT323', static;
+  font-family: "VT323", static;
 }
-.hero  {
-  margin: 0;
-  font-family: 'VT323', static;
-}
-section{
+
+section {
   flex-direction: row;
 }
 
-.hero-container{
+.hero-container {
   display: flex;
 }
-.hero-text-container{
+
+.hero-text-container {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
+.skills-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scroller{
+  max-width: 700px;
+}
+.scroll-item {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 25px;
+  padding-block: 10px;
+  border-radius: 10px;
+}
+

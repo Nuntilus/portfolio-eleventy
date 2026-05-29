@@ -1,0 +1,14 @@
+.ssh-text {
+  font-family: "VT323", static;
+}
+body{
+  padding: 0;
+}
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+}
+
+
