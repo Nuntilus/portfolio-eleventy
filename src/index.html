@@ -17,6 +17,16 @@ extraCss:
     </div>
   </div>
 </section>
+<section class = "skills-section">
+  <h2>My Skills</h2>
+  <div class="scroller">
+    <ul class="scroller-inner">
+      {%for skil in skills %}
+      <div class="scroll-item">{{skil}}</div>
+      {%endfor%}
+    </ul>
+  </div> 
+</section>
 <section>
   <div class="content-box">
     <h2>What i like</h2>
@@ -54,3 +64,8 @@ extraCss:
     <p>Email: nuntilus@clavitus.ch</p>
   </div>
 </section>
+
+<script src="/js/index.js">
+    
+</script>
+
