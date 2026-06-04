@@ -50,8 +50,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: cyan;
-  color: black;
   padding: 25px;
   padding-block: 10px;
   border-radius: 10px;
