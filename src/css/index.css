@@ -50,9 +50,23 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: cyan;
+  color: black;
   padding: 25px;
   padding-block: 10px;
   border-radius: 10px;
 }
+.project-section{
+  flex-direction: column;
+}
 
+.project-element {
+  transition: transform 0.2s ease;
+}
+
+.project-element:hover {
+  transform: scale(1.08);
+}
+.end-section{
+  justify-content: space-evenly;
+}
