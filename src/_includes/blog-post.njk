@@ -1,0 +1,13 @@
+---
+layout: layout.njk
+extraCss:
+  - /css/blog.css
+---
+<article class="blog-post content-box">
+  <a href="/blog/" class="blog-back">← Back to Blog</a>
+  <h1>{{ title }}</h1>
+  <time class="blog-meta" datetime="{{ page.date | dateString }}">{{ page.date | dateString }}</time>
+  <div class="blog-body">
+    {{ content | safe }}
+  </div>
+</article>
