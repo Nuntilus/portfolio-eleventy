@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Mio's Portfolio
+title: Nutilus 
 extraCss:
   - /css/index.css
   - /css/animations.css
@@ -17,6 +17,14 @@ extraCss:
     </div>
   </div>
 </section>
+<section class="about-me-section">
+  <div class="content-box">
+    <h2>About me</h2>
+    {% for element in info %}
+    <li>{{element.title}}: {{element.value}}</li>
+    {% endfor %}
+  </div>
+</section>
 <section class = "skills-section">
   <h2>My Skills</h2>
   <div class="scroller">
@@ -27,18 +35,21 @@ extraCss:
     </ul>
   </div> 
 </section>
-<section>
+<section class="project-section" id="projects">
+  <h2>My Projects</h2> 
+  <ul>
+    {%for project in projects %}
+      <li class="project-element">
+        <a href="/projects/{{ project.slug }}/">{{ project.name }}</a>
+      </li>
+    {%endfor%}
+  </ul>
+</section>
+<section class="end-section">
   <div class="content-box">
     <h2>What i like</h2>
     {% for hobbie in hobbies %}
     <li>{{hobbie}}</li>
-    {% endfor %}
-  </div>
-
-  <div class="content-box">
-    <h2>My skills</h2>
-    {% for skill in skills %}
-    <li>{{skill}}</li>
     {% endfor %}
   </div>
 
