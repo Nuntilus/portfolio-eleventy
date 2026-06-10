@@ -1,15 +1,3 @@
-.content-box {
-  background-color: #525174;
-  padding-left: 20px;
-  min-width: 20vw;
-  height: 40vh;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  margin-right: 20px;
-  filter: drop-shadow(0px 0px 20px #525174);
-  border-radius: 10px;
-}
 
 .hero {
   display: flex;
@@ -20,7 +8,7 @@
 .hero h1,
 .hero h2 {
   margin: 0;
-  font-family: "VT323", static;
+  font-family: "VT323", monospace;
 }
 
 section {
@@ -56,15 +44,120 @@ section {
 }
 .project-section{
   flex-direction: column;
+  align-items: center;
 }
 
+.project-timeline {
+  position: relative;
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+
+/* The connecting track line */
+.project-timeline::before {
+  content: '';
+  position: absolute;
+  top: 17px; /* aligns with center of the dot */
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: pink;
+}
+
+/* Each node */
 .project-element {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
   transition: transform 0.2s ease;
 }
 
 .project-element:hover {
-  transform: scale(1.08);
+  transform: translateY(-4px);
 }
-.end-section{
+
+/* Dot marker on the timeline track */
+.project-element::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: pink;
+  border: 3px solid #1F1721;
+  outline: 2px solid pink;
+  flex-shrink: 0;
+}
+
+.project-element a {
+  font-family: "VT323", monospace;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.project-dates {
+  font-size: 0.85rem;
+  color: #b0a0b0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.end-section {
   justify-content: space-evenly;
 }
+
+.links-section {
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 4rem;
+}
+
+.links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.links-list a::before {
+  content: '> ';
+}
+
+.tag-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 1rem;
+  color: pink;
+  border: 1px solid pink;
+  border-radius: 4px;
+  padding: 2px 10px;
+  background-color: transparent;
+}
+
+.tag::before { content: '['; margin-right: 2px; }
+.tag::after  { content: ']'; margin-left:  2px; }

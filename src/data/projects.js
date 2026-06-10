@@ -1,22 +1,34 @@
 module.exports = [
   {
-    name: "Nex-21 First steps",
-    slug: "nex-21-first-steps",
-    description: "A two week long entry into the buissnes world.",
-  },
-  {
     name: "Gallileo",
     slug: "gallileo",
-    description: "My first real Project i learned a lot of development skills like Angular and Java.",
+    info: {
+      host: "Mark Bigler",
+      startDate: "2025-08-04",
+      endDate: "2026-01-31",
+    },
+    description:
+      "My first real Project i learned a lot of development skills like Angular and Java.",
   },
   {
     name: "Appsteam",
     slug: "appsteam",
-    description: "My second Project i learned a lot of typescritp and Nestjs. I also learned how to work together with other devs on biger Projects.",
+    info: {
+      host: "Petre Tudor",
+      startDate: "2026-02-02",
+      endDate: "2026-07-31",
+    },
+    description:
+      "My second Project i learned a lot of typescritp and Nestjs. I also learned how to work together with other devs on biger Projects.",
   },
   {
     name: "[M]ini-net",
     slug: "mini-net",
+    info: {
+      host: "Elia Licari",
+      startDate: "2026-08-17",
+      endDate: "2027-01-31",
+    },
     description: "My next project still coming up",
-  },
+  }
 ];

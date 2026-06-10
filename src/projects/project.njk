@@ -7,9 +7,15 @@ permalink: "projects/{{ project.slug }}/"
 layout: layout.njk
 eleventyComputed:
   title: "{{ project.name }}"
+extraCss:
+  - /css/project.css
 ---
 <main class="content-box">
   <a href="/#projects">← Back</a>
   <h1>{{ project.name }}</h1>
+  <div class="project-meta">
+    <p>{{project.info.host}}</p>
+    <p>{{project.info.startDate}} - {{project.info.endDate}}</p>
+  </div>
   <p>{{ project.description }}</p>
 </main>
