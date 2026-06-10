@@ -6,7 +6,7 @@ extraCss:
   - /css/animations.css
 
 ---
-<section class="hero">
+<section class="hero full-height">
   <div class="hero-container">
     <div class="hero-emoji-container">
       <h1>👋</h1> 
@@ -17,62 +17,65 @@ extraCss:
     </div>
   </div>
 </section>
-<section class="about-me-section">
-  <div class="content-box">
+<section class="about-me-section full-height">
+  <div>
     <h2>About me</h2>
     {% for element in info %}
-    <li>{{element.title}}: {{element.value}}</li>
+    <p> > {{element.title}}: {{element.value}}</p>
     {% endfor %}
   </div>
 </section>
-<section class = "skills-section">
+<section class = "skills-section full-height">
   <h2>My Skills</h2>
   <div class="scroller">
     <ul class="scroller-inner">
       {%for skil in skills %}
-      <div class="scroll-item">{{skil}}</div>
+      <li class="scroll-item">{{skil}}</li>
       {%endfor%}
     </ul>
   </div> 
 </section>
-<section class="project-section" id="projects">
+<section class="project-section full-height" id="projects">
   <h2>My Projects</h2> 
-  <ul>
+  <div class="project-timeline">
     {%for project in projects %}
-      <li class="project-element">
+      <div class="project-element">
         <a href="/projects/{{ project.slug }}/">{{ project.name }}</a>
-      </li>
+        <span class="project-dates">{{ project.info.startDate | dateString }} → {{ project.info.endDate | dateString }}</span>
+      </div>
     {%endfor%}
-  </ul>
+  </div>
 </section>
-<section class="end-section">
-  <div class="content-box">
+<section class="end-section full-height">
+  <div class="tag-group">
     <h2>What i like</h2>
-    {% for hobbie in hobbies %}
-    <li>{{hobbie}}</li>
-    {% endfor %}
+    <div class="tag-list">
+      {% for hobbie in hobbies %}
+        <span class="tag">{{ hobbie }}</span>
+      {% endfor %}
+    </div>
   </div>
 
-  <div class="content-box">
+  <div class="tag-group">
     <h2>What i am learning</h2>
-    {% for learning in learnings %}
-      <li>{{learning}}</li>
-    {% endfor %}
+    <div class="tag-list">
+      {% for learning in learnings %}
+        <span class="tag">{{ learning }}</span>
+      {% endfor %}
+    </div>
   </div>
 </section>
-<section>
-  <div class="content-box">
-    <h2> My Links</h2>
-    <li>
-      <a href="https://github.com/Nuntilus">My github</a>
-    </li>
-    <li>
-      <a href="https://mio-galli.netlify.app">My old Portfolio</a>
-    </li>
-  </div> 
-  <div class="content-box">
-    <h2>Contact me</h2>
-    <p>Email: nuntilus@clavitus.ch</p>
+<section class="links-section">
+  <div class="links-group">
+    <h2>Links</h2>
+    <div class="links-list">
+      <a href="https://github.com/Nuntilus">GitHub</a>
+      <a href="https://mio-galli.netlify.app">Old Portfolio</a>
+    </div>
+  </div>
+  <div class="links-group">
+    <h2>Contact</h2>
+    <p>> nuntilus@clavitus.ch</p>
   </div>
 </section>
 
