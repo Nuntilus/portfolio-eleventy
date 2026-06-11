@@ -75,6 +75,22 @@
   }
 }
 
+@media (max-width: 800px) {
+  .type-writer,
+  .type-writer.offset,
+  .type-writer.offset2,
+  .type-writer.offset3,
+  .type-writer.stop-cursor {
+    animation: none;
+    border-right: 0;
+    overflow: visible;
+    white-space: normal;
+    width: auto;
+    max-width: none;
+    visibility: visible;
+  }
+}
+
 
 .scroller-inner {
   padding-block: 1rem;
