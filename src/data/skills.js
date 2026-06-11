@@ -3,5 +3,5 @@ module.exports = [
   "NestJS",
   "Angular",
   "TypeScript",
-  "Java"
+  "Java",
 ]
