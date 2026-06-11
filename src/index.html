@@ -39,14 +39,14 @@ extraCss:
   <h2>My Projects</h2> 
   <div class="project-timeline">
     {%for project in projects %}
-      <div class="project-element">
+      <div class="project-element hoverable">
         <a href="/projects/{{ project.slug }}/">{{ project.name }}</a>
         <span class="project-dates">{{ project.info.startDate | dateString }} → {{ project.info.endDate | dateString }}</span>
       </div>
     {%endfor%}
   </div>
 </section>
-<section class="end-section full-height">
+<section class="learning-hobby-section full-height">
   <div class="tag-group">
     <h2>What i like</h2>
     <div class="tag-list">
@@ -69,8 +69,8 @@ extraCss:
   <div class="links-group">
     <h2>Links</h2>
     <div class="links-list">
-      <a href="https://github.com/Nuntilus">GitHub</a>
-      <a href="https://mio-galli.netlify.app">Old Portfolio</a>
+      <a class="hoverable" href="https://github.com/Nuntilus">GitHub</a>
+      <a class="hoverable" href="https://mio-galli.netlify.app">Old Portfolio</a>
     </div>
   </div>
   <div class="links-group">
