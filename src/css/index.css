@@ -1,4 +1,3 @@
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -9,6 +8,14 @@
 .hero h2 {
   margin: 0;
   font-family: "VT323", monospace;
+}
+
+.hoverable {
+  transition: transform 0.2s ease;
+}
+
+.hoverable:hover {
+  transform: translateY(-4px);
 }
 
 section {
@@ -23,6 +30,185 @@ section {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 780px) {
+  .hero-emoji-container {
+    display: none;
+  }
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroller {
+  width: 700px;
+  max-width: 90vw;
+}
+
+.scroll-item {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  padding-block: 10px;
+  border-radius: 10px;
+}
+
+.project-section {
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-timeline {
+  position: relative;
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+
+/* The connecting track line */
+.project-timeline::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  /* aligns with center of the dot */
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: pink;
+}
+
+/* Each node */
+.project-element {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+}
+
+/* Dot marker on the timeline track */
+.project-element::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: pink;
+  border: 3px solid #1f1721;
+  outline: 2px solid pink;
+  flex-shrink: 0;
+}
+
+.project-element a {
+  font-family: "VT323", monospace;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.project-dates {
+  font-size: 0.85rem;
+  color: #b0a0b0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 830px) {
+  .project-timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-timeline::before {
+    left: 50%;
+    width: 2px;
+    height: 100%;
+  }
+
+  .project-element {
+    margin-top: 20px;
+  }
+}
+
+.learning-hobby-section {
+  justify-content: space-evenly;
+}
+
+.links-section {
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 4rem;
+}
+
+.links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.links-list a::before {
+  content: "> ";
+}
+
+.tag-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.tag-group h2 {
+  text-align: center;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tag {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 1rem;
+  color: pink;
+  border: 1px solid pink;
+  border-radius: 4px;
+  padding: 2px 10px;
+  background-color: transparent;
+}
+
+.tag::before {
+  content: "[";
+  margin-right: 2px;
+}
+
+.tag::after {
+  content: "]";
+  margin-left: 2px;
+}
+
+@media (max-width: 830px) {
+  .learning-hobby-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .skills-section{
   display: flex;

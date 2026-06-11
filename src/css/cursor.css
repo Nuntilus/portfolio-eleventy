@@ -1,8 +1,10 @@
 #cursor {
-  position: absolute;
+  position: fixed;
   width: 20vw;
   height: 20vw;
   z-index: -1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 
   background-color: turquoise;
   border-radius: 50%;
