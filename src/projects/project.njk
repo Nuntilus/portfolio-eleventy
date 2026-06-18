@@ -11,11 +11,40 @@ extraCss:
   - /css/project.css
 ---
 <main class="content-box">
-  <a href="/#projects">← Back</a>
-  <h1>{{ project.name }}</h1>
-  <div class="project-meta">
-    <p>{{project.info.host}}</p>
-    <p>{{project.info.startDate}} - {{project.info.endDate}}</p>
+  <a class="back-link" href="/#projects">← Back</a>
+
+  <div class="project-header">
+    <h1>{{ project.name }}</h1>
+    <div class="project-meta">
+      <span>> host: {{ project.info.host }}</span>
+      <span>> period: {{ project.info.startDate }} — {{ project.info.endDate }}</span>
+    </div>
   </div>
-  <p>{{ project.description }}</p>
+
+  {% if project.tags.length %}
+  <section class="project-section">
+    <h2>// stack</h2>
+    <div class="tag-list">
+      {% for tag in project.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="project-section">
+    <h2>// about</h2>
+    <p>{{ project.description }}</p>
+  </section>
+
+  {% if project.highlights.length %}
+  <section class="project-section">
+    <h2>// what i did</h2>
+    <ul class="project-highlights">
+      {% for item in project.highlights %}
+        <li>> {{ item }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 </main>
