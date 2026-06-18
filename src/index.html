@@ -74,11 +74,20 @@ extraCss:
   </div>
   <div class="links-group">
     <h2>Contact</h2>
-    <p>> nuntilus@clavitus.ch</p>
+    <span id="contact-email" class="links-list"></span>
   </div>
 </section>
 
-<script src="/js/index.js">
-    
+<script src="/js/index.js"></script>
+<script>
+  const el = document.getElementById("contact-email");
+  if (el) {
+    const addr = atob("bnVudGlsdXNAY2xhdml0dXMuY2g=");
+    const a = document.createElement("a");
+    a.href = "mailto:" + addr;
+    a.textContent = addr;
+    a.className = "hoverable";
+    el.appendChild(a);
+  }
 </script>
 
