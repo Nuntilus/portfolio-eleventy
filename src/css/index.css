@@ -159,6 +159,85 @@ section {
   justify-content: space-evenly;
 }
 
+.github-section {
+  flex-direction: column;
+  align-items: center;
+}
+
+.contrib-graph {
+  width: 80vw;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+}
+
+.contrib-graph svg {
+  width: 100%;
+  height: auto;
+}
+
+.contrib-graph rect[style*="#EEEEEE"] {
+  fill: transparent !important;
+  stroke: pink;
+  stroke-width: 0.5;
+}
+
+.contrib-graph rect[data-score] {
+  rx: 2;
+}
+
+.repo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  width: 80vw;
+  max-width: 900px;
+}
+
+.repo-card {
+  border: 1px solid pink;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.repo-card a {
+  font-family: "VT323", monospace;
+  font-size: 1.4rem;
+  color: pink;
+  text-decoration: none;
+}
+
+.repo-card a:hover {
+  text-decoration: underline;
+}
+
+.repo-desc {
+  font-size: 0.9rem;
+  color: #b0a0b0;
+  margin: 0;
+}
+
+.repo-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.repo-lang {
+  color: white;
+}
+
+.repo-stars {
+  color: #b0a0b0;
+}
+
 .end-section {
   justify-content: space-evenly;
 }
