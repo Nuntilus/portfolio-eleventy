@@ -9,9 +9,9 @@ function addAnimation() {
     const scrollerInner = scroller.querySelector(".scroller-inner");
     const scrollerContent = Array.from(scrollerInner.children);
     scrollerContent.forEach(item=>{
-      const dublicatedItems = item.cloneNode(true)
-      dublicatedItems.setAttribute('aria-hidden', true);
-      scrollerInner.appendChild(dublicatedItems);
+      const duplicatedItems = item.cloneNode(true)
+      duplicatedItems.setAttribute('aria-hidden', true);
+      scrollerInner.appendChild(duplicatedItems);
     })
   })
 }
