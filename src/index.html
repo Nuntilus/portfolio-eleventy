@@ -65,6 +65,22 @@ extraCss:
     </div>
   </div>
 </section>
+<section class="github-section full-height" id="github">
+  <h2>On GitHub</h2>
+  <div class="contrib-graph">{{ contribgraph | safe }}</div>
+  <ul class="repo-list" id="repo-list">
+    {% for repo in github %}
+    <li class="repo-card">
+      <a href="{{ repo.html_url }}" target="_blank" rel="noopener">{{ repo.name }}</a>
+      {% if repo.description %}<p class="repo-desc">{{ repo.description }}</p>{% endif %}
+      <div class="repo-meta">
+        {% if repo.language %}<span class="repo-lang">{{ repo.language }}</span>{% endif %}
+        <span class="repo-stars">★ {{ repo.stargazers_count }}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
 <section class="links-section">
   <div class="links-group">
     <h2>Links</h2>
@@ -79,6 +95,7 @@ extraCss:
 </section>
 
 <script src="/js/index.js"></script>
+<script src="/js/github.js"></script>
 <script>
   const el = document.getElementById("contact-email");
   if (el) {
