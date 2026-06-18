@@ -19,7 +19,7 @@ module.exports = [
       endDate: "2026-07-31",
     },
     description:
-      "My second Project i learned a lot of typescritp and Nestjs. I also learned how to work together with other devs on biger Projects.",
+      "My second Project i learned a lot of TypeScript and NestJS. I also learned how to work together with other devs on bigger Projects.",
   },
   {
     name: "[M]ini-net",
