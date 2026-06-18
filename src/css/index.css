@@ -127,16 +127,21 @@ section {
   .project-timeline {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .project-timeline::before {
+    top: 0;
     left: 50%;
+    right: auto;
+    transform: translateX(-50%);
     width: 2px;
-    height: 100%;
+    bottom: 0;
+    height: auto;
   }
 
-  .project-element {
-    margin-top: 20px;
+  .project-element{
+    margin-block: 20px;
   }
 }
 
@@ -209,15 +214,29 @@ section {
     flex-direction: column;
     align-items: center;
   }
+
+  .project-timeline {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 2px;
+    height: auto;
+  }
 }
-.skills-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.scroller {
+  width: 700px;
+  max-width: 90vw;
 }
-.scroller{
-  max-width: 700px;
-}
+
 .scroll-item {
   font-size: 1.2rem;
   display: flex;
@@ -228,42 +247,12 @@ section {
   padding-block: 10px;
   border-radius: 10px;
 }
-.project-section{
+
+.project-section {
   flex-direction: column;
   align-items: center;
 }
 
-.project-timeline {
-  position: relative;
-  width: 70vw;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  padding-top: 10px;
-}
-
-/* The connecting track line */
-.project-timeline::before {
-  content: '';
-  position: absolute;
-  top: 17px; /* aligns with center of the dot */
-  left: 5%;
-  right: 5%;
-  height: 2px;
-  background: pink;
-}
-
-/* Each node */
-.project-element {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  z-index: 1;
-  transition: transform 0.2s ease;
-}
 
 .project-element:hover {
   transform: translateY(-4px);
@@ -271,13 +260,13 @@ section {
 
 /* Dot marker on the timeline track */
 .project-element::before {
-  content: '';
+  content: "";
   display: block;
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background: pink;
-  border: 3px solid #1F1721;
+  border: 3px solid #1f1721;
   outline: 2px solid pink;
   flex-shrink: 0;
 }
@@ -294,7 +283,6 @@ section {
   text-align: center;
   white-space: nowrap;
 }
-
 
 .end-section {
   justify-content: space-evenly;
@@ -319,7 +307,7 @@ section {
 }
 
 .links-list a::before {
-  content: '> ';
+  content: "> ";
 }
 
 .tag-group {
@@ -345,5 +333,12 @@ section {
   background-color: transparent;
 }
 
-.tag::before { content: '['; margin-right: 2px; }
-.tag::after  { content: ']'; margin-left:  2px; }
+.tag::before {
+  content: "[";
+  margin-right: 2px;
+}
+
+.tag::after {
+  content: "]";
+  margin-left: 2px;
+}
