@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Nutilus 
+title: Nuntilus 
 extraCss:
   - /css/index.css
   - /css/animations.css
@@ -13,7 +13,7 @@ extraCss:
     </div>
     <div class="hero-text-container">
       <h1 class = "type-writer stop-cursor"> Hello I am Nuntilus</h1> 
-      <h2 class = "type-writer offset">An aprentice as a Software developer</h2> 
+      <h2 class = "type-writer offset">An apprentice as a Software developer</h2> 
     </div>
   </div>
 </section>
@@ -29,8 +29,8 @@ extraCss:
   <h2>My Skills</h2>
   <div class="scroller">
     <ul class="scroller-inner">
-      {%for skil in skills %}
-      <li class="scroll-item">{{skil}}</li>
+      {%for skill in skills %}
+      <li class="scroll-item">{{skill}}</li>
       {%endfor%}
     </ul>
   </div> 
@@ -50,8 +50,8 @@ extraCss:
   <div class="tag-group">
     <h2>What i like</h2>
     <div class="tag-list">
-      {% for hobbie in hobbies %}
-        <span class="tag">{{ hobbie }}</span>
+      {% for hobby in hobbies %}
+        <span class="tag">{{ hobby }}</span>
       {% endfor %}
     </div>
   </div>
@@ -65,21 +65,46 @@ extraCss:
     </div>
   </div>
 </section>
+<section class="github-section full-height" id="github">
+  <h2>On GitHub</h2>
+  <div class="contrib-graph">{{ contribgraph | safe }}</div>
+  <ul class="repo-list" id="repo-list">
+    {% for repo in github %}
+    <li class="repo-card">
+      <a href="{{ repo.html_url }}" target="_blank" rel="noopener">{{ repo.name }}</a>
+      {% if repo.description %}<p class="repo-desc">{{ repo.description }}</p>{% endif %}
+      <div class="repo-meta">
+        {% if repo.language %}<span class="repo-lang">{{ repo.language }}</span>{% endif %}
+        <span class="repo-stars">★ {{ repo.stargazers_count }}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
 <section class="links-section">
   <div class="links-group">
     <h2>Links</h2>
     <div class="links-list">
       <a class="hoverable" href="https://github.com/Nuntilus">GitHub</a>
-      <a class="hoverable" href="https://mio-galli.netlify.app">Old Portfolio</a>
     </div>
   </div>
   <div class="links-group">
     <h2>Contact</h2>
-    <p>> nuntilus@clavitus.ch</p>
+    <span id="contact-email" class="links-list"></span>
   </div>
 </section>
 
-<script src="/js/index.js">
-    
+<script src="/js/index.js"></script>
+<script src="/js/github.js"></script>
+<script>
+  const el = document.getElementById("contact-email");
+  if (el) {
+    const addr = atob("bnVudGlsdXNAY2xhdml0dXMuY2g=");
+    const a = document.createElement("a");
+    a.href = "mailto:" + addr;
+    a.textContent = addr;
+    a.className = "hoverable";
+    el.appendChild(a);
+  }
 </script>
 
