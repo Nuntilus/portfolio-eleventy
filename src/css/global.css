@@ -1,5 +1,6 @@
 :root {
   --color-bg:          #1f1721;
+  --color-bg-dark:     #0F0C0F;
   --color-accent:      #ffc0cb;
   --color-text-muted:  #b0a0b0;
   --color-link:        #ffffff;
@@ -19,6 +20,12 @@ section {
   display: flex;
   flex-direction: column;
   padding-left: 5vw;
+}
+
+footer{
+  background-color: var(--color-bg-dark);
+  height: 10vh;
+  width: 100vw;
 }
 
 .full-height {
