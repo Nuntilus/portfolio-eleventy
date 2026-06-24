@@ -1,7 +1,7 @@
 module.exports = [
   "Linux",
   "Coding",
-  "Homelabing",
+  "Homelab",
   "Mountainbiking",
 ]
 

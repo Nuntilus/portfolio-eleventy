@@ -9,9 +9,9 @@ module.exports = [
     },
     tags: ["Angular", "Java", "Spring Boot", "TypeScript"],
     highlights: [
-      "Built and maintained frontend features with Angular",
+      "My first experience in Software Development",
       "Worked with a Java/Spring Boot backend REST API",
-      "First experience in a real professional dev environment",
+      "Built a frontend with Angular and TypeScript",
     ],
     description:
       "My first real Project i learned a lot of development skills like Angular and Java.",
@@ -24,14 +24,14 @@ module.exports = [
       startDate: "2026-02-02",
       endDate: "2026-07-31",
     },
-    tags: ["TypeScript", "NestJS", "Git"],
+    tags: ["TypeScript", "NestJS", "React"],
     highlights: [
-      "Built backend services with NestJS and TypeScript",
+      "Built and maintained large scale TypeScript/NestJS backends",
       "Collaborated with other developers on a larger codebase",
       "Learned code review workflows and Git branching strategies",
     ],
     description:
-      "My second Project i learned a lot of TypeScript and NestJS. I also learned how to work together with other devs on bigger Projects.",
+      "My first project in a professional environment. I developed large scale backends with TypeScript and NestJS and learned a lot about code reviewing workflows and professional development.",
   },
   {
     name: "[M]ini-net",
