@@ -2,7 +2,7 @@
 :root {
   --typewriter-duration: 1s;
   --caret-blinking-duration: 0.7s;
-  --caret-color: pink;
+  --caret-color: var(--color-accent);
 }
 
 .type-writer {
