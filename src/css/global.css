@@ -1,7 +1,16 @@
+:root {
+  --color-bg:          #1f1721;
+  --color-bg-dark:     #0F0C0F;
+  --color-accent:      #ffc0cb;
+  --color-text-muted:  #b0a0b0;
+  --color-link:        #ffffff;
+  --color-cursor-glow: #40e0d0;
+}
+
 body {
   font-family: 'Anonymous Pro', monospace;
-  background-color: #1F1721;
-  color: pink;
+  background-color: var(--color-bg);
+  color: var(--color-accent);
   line-height: 1.6;
   margin: 0;
   padding: 2rem;
@@ -11,6 +20,12 @@ section {
   display: flex;
   flex-direction: column;
   padding-left: 5vw;
+}
+
+footer{
+  background-color: var(--color-bg-dark);
+  height: 10vh;
+  width: 100vw;
 }
 
 .full-height {
@@ -38,7 +53,7 @@ li{
 }
 
 a{
-  color: white;
+  color: var(--color-link);
 }
 
 h1, h2, p, a {

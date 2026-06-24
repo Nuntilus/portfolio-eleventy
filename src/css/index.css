@@ -84,10 +84,9 @@ section {
   left: 5%;
   right: 5%;
   height: 2px;
-  background: pink;
+  background: var(--color-accent);
 }
 
-/* Each node */
 .project-element {
   position: relative;
   display: flex;
@@ -109,9 +108,9 @@ section {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: pink;
-  border: 3px solid #1f1721;
-  outline: 2px solid pink;
+  background: var(--color-accent);
+  border: 3px solid var(--color-bg);
+  outline: 2px solid var(--color-accent);
   flex-shrink: 0;
 }
 
@@ -123,7 +122,7 @@ section {
 
 .project-dates {
   font-size: 0.85rem;
-  color: #b0a0b0;
+  color: var(--color-text-muted);
   text-align: center;
   white-space: nowrap;
 }
@@ -159,6 +158,37 @@ section {
   justify-content: space-evenly;
 }
 
+.fastfetch{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  gap: 1rem;
+  height: max-content;
+}
+.setup-section{
+  flex-direction: column;
+  justify-content: center;
+}
+.fastfetch-arch-ascii {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+}
+.fastfetch-arch-ascii pre {
+  width: max-content;
+}
+.fastfetch-dividor{
+  background-color: var(--color-accent);
+  width: 1px;
+  min-height: 100%;
+}
+
+.fastfetch-arch-ascii,
+.fastfetch-specs {
+  width: 50%;
+}
+
 .github-section {
   flex-direction: column;
   align-items: center;
@@ -177,7 +207,7 @@ section {
 
 .contrib-graph rect[style*="#EEEEEE"] {
   fill: transparent !important;
-  stroke: pink;
+  stroke: var(--color-accent);
   stroke-width: 0.5;
 }
 
@@ -197,7 +227,7 @@ section {
 }
 
 .repo-card {
-  border: 1px solid pink;
+  border: 1px solid var(--color-accent);
   border-radius: 6px;
   padding: 1rem 1.2rem;
   display: flex;
@@ -208,7 +238,7 @@ section {
 .repo-card a {
   font-family: "VT323", monospace;
   font-size: 1.4rem;
-  color: pink;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -218,24 +248,23 @@ section {
 
 .repo-desc {
   font-size: 0.9rem;
-  color: #b0a0b0;
+  color: var(--color-text-muted);
   margin: 0;
 }
 
-.repo-meta {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.85rem;
-  margin-top: auto;
-  padding-top: 6px;
+display: flex;
+gap: 1rem;
+font-size: 0.85rem;
+margin-top: auto;
+padding-top: 6px;
 }
 
 .repo-lang {
-  color: white;
+  color: var(--color-link);
 }
 
 .repo-stars {
-  color: #b0a0b0;
+  color: var(--color-text-muted);
 }
 
 .end-section {
@@ -285,8 +314,8 @@ section {
 .tag {
   font-family: "Anonymous Pro", monospace;
   font-size: 1rem;
-  color: pink;
-  border: 1px solid pink;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
   border-radius: 4px;
   padding: 2px 10px;
   background-color: transparent;

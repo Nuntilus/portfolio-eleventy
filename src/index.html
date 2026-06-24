@@ -65,6 +65,32 @@ extraCss:
     </div>
   </div>
 </section>
+<section class="setup-section full-height">
+  <h1>My Setup</h1>
+  <div class="fastfetch">
+    <div class="fastfetch-arch-ascii">
+      <pre>
+      /\
+     /  \
+    /    \
+   /      \
+  /   ,,   \
+ /   |  |   \
+/_-''    ''-_\
+      </pre>
+    </div> 
+    <div class="fastfetch-dividor"> </div>
+    <div class="fastfetch-specs">
+      <p class="user-host">
+        nuntilus@portfolio<br>
+        ------------------
+      </p>
+      {%for spec in setup %}
+      <p>{{spec.category}}: {{spec.tool}}</p>
+      {%endfor%}
+    </div>
+  </div>
+</section>
 <section class="github-section full-height" id="github">
   <h2>On GitHub</h2>
   <div class="contrib-graph">{{ contribgraph | safe }}</div>
@@ -93,7 +119,6 @@ extraCss:
     <span id="contact-email" class="links-list"></span>
   </div>
 </section>
-
 <script src="/js/index.js"></script>
 <script src="/js/github.js"></script>
 <script>
