@@ -20,7 +20,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  border-bottom: 1px solid #3a2a3a;
   padding-bottom: 1.5rem;
 }
 
