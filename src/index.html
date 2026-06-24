@@ -70,7 +70,7 @@ extraCss:
   <div class="contrib-graph">{{ contribgraph | safe }}</div>
   <ul class="repo-list" id="repo-list">
     {% for repo in github %}
-    <li class="repo-card">
+    <li class="repo-card hoverable">
       <a href="{{ repo.html_url }}" target="_blank" rel="noopener">{{ repo.name }}</a>
       {% if repo.description %}<p class="repo-desc">{{ repo.description }}</p>{% endif %}
       <div class="repo-meta">
