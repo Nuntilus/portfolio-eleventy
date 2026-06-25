@@ -21,7 +21,7 @@ function renderRepos(repos) {
   list.innerHTML = repos
     .map(
       (repo) => `
-    <li class="repo-card">
+    <li class="repo-card hoverable">
       <a href="${repo.html_url}" target="_blank" rel="noopener">${repo.name}</a>
       ${repo.description ? `<p class="repo-desc">${repo.description}</p>` : ""}
       <div class="repo-meta">
