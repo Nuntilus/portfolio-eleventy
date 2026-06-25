@@ -5,7 +5,7 @@ async function fetchRepos() {
   if (cached) return JSON.parse(cached);
 
   const res = await fetch(
-    "https://api.github.com/users/Nuntilus/repos?sort=updated&per_page=100"
+    "https://api.github.com/users/Nuntilus/repos?sort=updated&per_page=100",
   );
   if (!res.ok) return null;
 
@@ -28,7 +28,7 @@ function renderRepos(repos) {
         ${repo.language ? `<span class="repo-lang">${repo.language}</span>` : ""}
         <span class="repo-stars">★ ${repo.stargazers_count}</span>
       </div>
-    </li>`
+    </li>`,
     )
     .join("");
 }
