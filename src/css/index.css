@@ -269,11 +269,12 @@ section {
   margin: 0;
 }
 
-display: flex;
-gap: 1rem;
-font-size: 0.85rem;
-margin-top: auto;
-padding-top: 6px;
+.repo-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  margin-top: auto;
+  padding-top: 6px;
 }
 
 .repo-lang {
