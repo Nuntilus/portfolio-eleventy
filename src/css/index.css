@@ -173,9 +173,10 @@ section {
 .fastfetch-arch-ascii {
   font-size: 1.3rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .fastfetch-arch-ascii pre {
+  margin-right: 10px;
   width: max-content;
 }
 .fastfetch-dividor{
@@ -189,6 +190,22 @@ section {
   width: 50%;
 }
 
+@media (max-width: 540px){
+  .fastfetch-arch-ascii{
+    display: none;
+  }
+
+  .fastfetch-dividor{
+    display: none;
+  }
+  .setup-section{
+    align-items: center;
+  }
+  .fastfetch-specs{
+    width: max-content
+  }
+
+}
 .github-section {
   flex-direction: column;
   align-items: center;
