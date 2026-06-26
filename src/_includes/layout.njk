@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://nuntilus.ch">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/cursor.css">
+  <link rel="stylesheet" href="/css/terminal.css">
   {% for href in extraCss %}
   {% if "/css/animations.css" in href %}
   <link rel="preload" href="{{ href }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -34,6 +35,7 @@
 </head>
 <body>
   <div id="cursor"></div>
+  <div id="terminal-hint">t — terminal</div>
   {{ content | safe }}
   <script src="/js/cursor.js" defer></script>
 </body>
