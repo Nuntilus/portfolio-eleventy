@@ -1,6 +1,6 @@
 module.exports = [
   {
-    name: "Gallileo",
+    name: "Gallileo Starters",
     slug: "gallileo",
     info: {
       host: "Mark Bigler",
@@ -10,14 +10,13 @@ module.exports = [
     tags: ["Angular", "Java", "Spring Boot", "TypeScript"],
     highlights: [
       "My first experience in Software Development",
-      "Worked with a Java/Spring Boot backend REST API",
-      "Built a frontend with Angular and TypeScript",
+      "Build fulstak apps with Angular and Spring Boot",
     ],
     description:
-      "My first real Project i learned a lot of development skills like Angular and Java.",
+      "My first project. I learned a lot about web development during this time. Because it was an onboarding project, I had my first software development experiences and learned how to use basic tools like Git and a code editor, as well as the fundamentals of programming. I started with JavaScript and Angular to build a frontend and also built a backend using Java and Spring Boot.",
   },
   {
-    name: "Appsteam",
+    name: "Backend Developer @ Appsteam",
     slug: "appsteam",
     info: {
       host: "Petre Tudor",
@@ -26,12 +25,12 @@ module.exports = [
     },
     tags: ["TypeScript", "NestJS", "React"],
     highlights: [
-      "Built and maintained large scale TypeScript/NestJS backends",
       "Collaborated with other developers on a larger codebase",
       "Learned code review workflows and Git branching strategies",
+      "Advaced my TypeScript and NestJS skills",
     ],
     description:
-      "My first project in a professional environment. I developed large scale backends with TypeScript and NestJS and learned a lot about code reviewing workflows and professional development.",
+      "My first project in a professional environment. I developed large-scale backends using TypeScript and NestJS and learned a lot about code review workflows and professional development. I developed an application with a team of other developers and was able to see the whole process—from planning the software and its architecture, through development, to deployment.",
   },
   {
     name: "[M]ini-net",

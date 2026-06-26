@@ -1,6 +1,6 @@
 module.exports=[
   "Rust",
-  "Proxmox",
   "Networking",
+  "Docker",
   "Security",
 ]
