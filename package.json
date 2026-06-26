@@ -1,15 +1,15 @@
 {
-  "name": "portfolio-eleventy",
+  "name": "portfolio-nuntilu",
   "version": "1.0.0",
-  "description": "",
+  "description": "A portfolio website built with Eleventy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "eleventy --serve",
-    "build": "eleventy"
+    "serve": "npx eleventy --serve",
+    "build": "rm dist/* -rf && npx eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nuntilus",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
