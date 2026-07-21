@@ -34,7 +34,16 @@
 </head>
 <body>
   <div id="cursor"></div>
-  {{ content | safe }}
+  <main class="page-content">
+    {{ content | safe }}
+  </main>
+  <footer class="footer">
+    <div class="centered">
+    © 2026 Nuntilus. All rights reserved. 
+    <a href="https://github.com/Nuntilus/" target="_blank"><img src="https://github.githubassets.com/favicons/favicon-dark.png" alt="Github"></a>
+    </div>
+    <iframe style="border: 0px; height: 80px;" src="https://tawaki.sh/navigation"></iframe>
+  </footer>
   <script src="/js/cursor.js" defer></script>
 </body>
 </html>
