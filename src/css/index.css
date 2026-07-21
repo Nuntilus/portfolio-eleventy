@@ -348,3 +348,9 @@ section {
   content: "]";
   margin-left: 2px;
 }
+
+.webring-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
