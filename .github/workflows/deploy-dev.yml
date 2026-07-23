@@ -1,11 +1,11 @@
 
-name: Deploy Project
+name: Deploy Project (Dev)
 
 on:
   push: 
     branches: [ develop ]
   repository_dispatch:
-    types: [ blog-posts-updated ]
+    types: [ blog-posts-updated-dev ]
 jobs:
   deploy:
     runs-on: ubuntu-latest
