@@ -1,0 +1,30 @@
+
+name: Deploy Project
+
+on:
+  push: 
+    branches: [ develop ]
+  repository_dispatch:
+    types: [ blog-posts-updated ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container: 
+      image: node:20
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          node-version: 20
+      - name: Fetch latest blog posts
+        run: |
+          rm -f src/blog/posts/*.md
+          git clone --depth 1 https://github.com/Nuntilus/blog-posts.git /tmp/blog-posts
+          cp /tmp/blog-posts/*.md src/blog/posts/
+      - run: npm ci
+      - run: npm run build
+      - name: Get SSH key and set permissions
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+      - name: Deploy to server
+        run:  scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/var/www/portfolio-dev
