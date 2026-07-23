@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/nuntilus.asc");
+  eleventyConfig.addPassthroughCopy("src/og-image.png");
 
   eleventyConfig.addFilter("dateString", (date) => {
     return new Date(date).toISOString().slice(0, 10);
