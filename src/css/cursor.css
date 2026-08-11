@@ -1,12 +1,20 @@
-#cursor {
+#cursor,
+.cursor-trail {
   position: fixed;
   width: 20vw;
   height: 20vw;
   z-index: -1;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%, -50%) scale(var(--cursor-scale, 1));
   background-color: var(--color-cursor-glow);
+  border: var(--color-cursor-glow) 2px solid;
   border-radius: 50%;
   filter: blur(100px);
+  opacity: 0.1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-trail {
+    display: none;
+  }
 }
