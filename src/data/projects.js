@@ -31,15 +31,18 @@ module.exports = [
       "My first project in a professional environment. I developed large-scale backends using TypeScript and NestJS and learned a lot about code review workflows and professional development. I developed an application with a team of other developers and was able to see the whole process—from planning the software and its architecture, through development, to deployment.",
   },
   {
-    name: "[M]ini-net",
+    name: "[M]INI NET",
     slug: "mini-net",
     info: {
       startDate: "2026-08-17",
       endDate: "2027-01-31",
     },
-    tags: [],
-    highlights: [],
-    description: "My next project — still coming up.",
+    tags: ["GO", "VUE", "Projectmanagement"],
+    highlights: [
+      "Managaging my own Projects",
+      "Comunicating with clients",
+    ],
+    description: "[M]INI NET is a team responsible for projects from across all off INI-NET. I was given my own projects to manage. I learnt not only development related topics, but also how to plan and manage a project and how to communicate with clients. I also learned how to build an application from a design perspective. I learned how to handle larger endpoints, manage APIs, and deploy in the Swisscom infrastructure.",
   }
 ];
 
